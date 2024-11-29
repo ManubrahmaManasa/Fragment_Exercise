@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(),CallBackInterface {
         fragmentTransaction = fragmentManager.beginTransaction()
         val listFragment = ListFragment()
         listFragment.assignCallBackInterface(this)
-        fragmentTransaction.add(R.id.fragment_container,ListFragment())
+        fragmentTransaction.add(R.id.fragment_container,listFragment)
         fragmentTransaction.commit()
     }
 
