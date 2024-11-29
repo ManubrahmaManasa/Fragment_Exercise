@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Fragment_Exercise</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string-array name="fruits">
+        <item>Mango</item>
+        <item>Banana</item>
+        <item>Orange</item>
+        <item>Pomegranate</item>
+        <item>Watermelon</item>
+        <item>Kiwi</item>
+        <item>Cherry</item>
+        <item>Strawberry</item>
+    </string-array>
+
+    <string name="Mango">
+        Mango is known as the "king of fruits." It is a tropical fruit with sweet, juicy yellow or orange flesh and a fibrous seed. Rich in vitamin C, A, and antioxidants, mangoes are enjoyed fresh, in smoothies, or as a base for sauces and desserts.</string>
+    <string name="Banana">
+        Bananas are a versatile and nutritious fruit with a sweet, creamy texture. They are an excellent source of potassium, vitamin B6, and dietary fiber. Often eaten as a quick snack, they are also used in baking and smoothies.</string>
+    <string name="Orange">
+        Oranges are citrus fruits with a tangy-sweet taste. They are high in vitamin C and flavonoids, promoting immunity and skin health. Oranges are commonly consumed fresh or juiced and are also used in desserts and marinades.</string>
+    <string name="Pomegranate">
+        Pomegranates are ruby-red fruits filled with jewel-like seeds (arils) that are sweet and slightly tart. Packed with antioxidants, vitamin C, and fiber, they are often eaten fresh, added to salads, or used in juice and sauces.</string>
+    <string name="Watermelon">
+        Watermelon is a refreshing, hydrating fruit with a high water content and sweet, crisp red or yellow flesh. Rich in vitamins A and C, it is perfect for hot days and is often eaten fresh or blended into juices and smoothies.</string>
+    <string name="Kiwi">
+        Kiwi is a small, fuzzy fruit with vibrant green flesh and tiny black seeds. It has a tangy-sweet flavor and is an excellent source of vitamin C, vitamin K, and fiber. Kiwi is enjoyed fresh or as a topping for yogurt and desserts.</string>
+    <string name="Cherry">
+        Cherries are small, round fruits with a juicy, sweet, or tart taste, depending on the variety. They are rich in antioxidants, vitamin C, and anti-inflammatory compounds. Cherries are enjoyed fresh, in pies, jams, or as a garnish.</string>
+    <string name="Strawberry">
+        Strawberries are bright red berries with a sweet flavor and a juicy texture. They are high in vitamin C, manganese, and antioxidants. Strawberries are often eaten fresh, added to desserts, or blended into beverages.</string>
+</resources>
