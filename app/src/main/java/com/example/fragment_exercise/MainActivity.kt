@@ -1,17 +1,15 @@
 package com.example.fragment_exercise
 
 import android.os.Bundle
-import android.view.WindowManager
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.fragment_exercise.FragmentActionListener.Companion.ACTION_KEY
+import com.example.fragment_exercise.FragmentActionListener.Companion.ACTION_VALUE_FRUIT_SELECTED
+import com.example.fragment_exercise.FragmentActionListener.Companion.KEY_SELECTED_FRUIT
 import com.example.fragment_exercise.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(),CallBackInterface {
+class MainActivity : AppCompatActivity(),FragmentActionListener {
 
     private lateinit var mainBinding: ActivityMainBinding
     lateinit var fragmentManager:FragmentManager
@@ -33,11 +31,25 @@ class MainActivity : AppCompatActivity(),CallBackInterface {
         fragmentTransaction = fragmentManager.beginTransaction()
         val listFragment = ListFragment()
         listFragment.assignCallBackInterface(this)
-        fragmentTransaction.add(R.id.fragment_container,ListFragment())
+        fragmentTransaction.add(R.id.fragment_container,listFragment)
         fragmentTransaction.commit()
     }
 
-    override fun callBackMethod() {
-        Toast.makeText(this,"Trigger other Fragment",Toast.LENGTH_SHORT).show()
+    private fun addDescriptionFragment(bundle: Bundle){
+        fragmentTransaction = fragmentManager.beginTransaction()
+        val listDescriptionFragment = ListDescription_Fragment()
+
+        listDescriptionFragment.arguments = bundle
+
+        fragmentTransaction.replace(R.id.fragment_container,listDescriptionFragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
+    }
+
+    override fun onAction(bundle: Bundle) {
+        val actionPerformed:Int = bundle.getInt(ACTION_KEY)
+        when(actionPerformed){
+            ACTION_VALUE_FRUIT_SELECTED -> addDescriptionFragment(bundle)
+        }
     }
 }
